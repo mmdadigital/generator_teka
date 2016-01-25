@@ -44,3 +44,6 @@ gulp
 * Spritesmith for sprite generation (Just save png files into assets/img/sprite and retrieve on dist/img/sprite.png)
 * Sass compile and minify
 * JS concat and uglify
+
+
+[![Build Status](https://travis-ci.org/mmdadigital/generator_teka.svg?branch=master)](https://travis-ci.org/mmdadigital/generator_teka)
