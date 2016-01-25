@@ -122,3 +122,28 @@ gulp.task('default', [
     'watch',
     'sprite'
 ]);
+
+//////////////////////////////
+// img Deploy
+//////////////////////////////
+gulp.task('img-deploy', function () {
+    gulp.src(['assets/img/*']).pipe(gulp.dest('dist/img'))
+});
+
+//////////////////////////////
+// Font Deploy
+//////////////////////////////
+gulp.task('font-deploy', function () {
+    gulp.src(['assets/fonts/*']).pipe(gulp.dest('dist/fonts'))
+});
+
+//////////////////////////////
+/// BUILD TASK FOR JENKINS
+//////////////////////////////
+gulp.task('build', [
+    'sass',
+    'js',
+    'sprite',
+    'font-deploy',
+    'img-deploy'
+]);
