@@ -1,6 +1,6 @@
 {
   "name": "generator-teka",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Yeoman Generator to create a brand new teka theme.",
   "license": "MIT",
   "main": "generators/app/index.js",
