@@ -1,0 +1,58 @@
+{
+  "name": "generator-teka",
+  "version": "1.0.1",
+  "description": "A Yeoman Generator to create a brand new teka theme.",
+  "license": "MIT",
+  "main": "generators/app/index.js",
+  "author": {
+    "name": "MMDA",
+    "email": "merker@mmda.com.br",
+    "url": "https://mmda.com.br"
+  },
+  "engines": {
+    "node": ">=0.10.25"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "drupal",
+    "drupal-theme",
+    "teka"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0",
+    "yosay": "^0.1.0",
+    "underscore.string": "~2.3.3",
+    "sync-exec": "^0.4.0",
+    "rimraf": "~2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "_id": "generator-teka@1.0.1",
+  "scripts": {},
+  "_shasum": "f13bcd126b34d5f7709cb42af5cd444c5be5e39d",
+  "_from": "generator-teka@*",
+  "_npmVersion": "2.13.1",
+  "_nodeVersion": "0.10.25",
+  "_npmUser": {
+    "name": "mmda",
+    "email": "merker@mmda.com.br"
+  },
+  "maintainers": [
+    {
+      "name": "mmda",
+      "email": "merker@mmda.com.br"
+    }
+  ],
+  "dist": {
+    "shasum": "f13bcd126b34d5f7709cb42af5cd444c5be5e39d",
+    "tarball": "http://registry.npmjs.org/generator-teka/-/generator-teka-1.0.1.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/generator-teka/-/generator-teka-1.0.1.tgz",
+  "readme": "ERROR: No README data found!"
+}
