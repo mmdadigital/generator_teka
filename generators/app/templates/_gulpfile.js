@@ -103,13 +103,34 @@ gulp.task('sprite', function () {
 });
 
 //////////////////////////////
+// Images Task
+//////////////////////////////
+var allowedFiles = [
+  'assets/img/*.png',
+  'assets/img/*.jpg',
+  'assets/img/*.jpeg',
+  'assets/img/*.gif',
+  'assets/img/*.svg'
+];
+gulp.task('images', function () {
+  var spriteData = gulp.src(allowedFiles)
+  .pipe(gulp.dest('dist/img/')).on('error',console.log.bind(console));
+});
+
+//////////////////////////////
+// Font Task
+//////////////////////////////
+gulp.task('fonts', function () {
+    gulp.src(['assets/fonts/*']).pipe(gulp.dest('dist/fonts'))
+});
+
+//////////////////////////////
 // Watch Tasks
 //////////////////////////////
 gulp.task('watch', ['browser-sync'], function () {
     gulp.watch(path.js_src, ['js']).on('error',console.log.bind(console));
     gulp.watch(path.sassWatch, ['sass']).on('error',console.log.bind(console));
     gulp.watch('assets/img/sprite/*.*', ['sprite']).on('error',console.log.bind(console));
-
     gulp.watch('dist/js/*.*').on('change', browserSync.reload);
 });
 
@@ -120,22 +141,10 @@ gulp.task('default', [
     'sass',
     'js',
     'watch',
-    'sprite'
+    'sprite',
+    'images',
+    'fonts'
 ]);
-
-//////////////////////////////
-// img Deploy
-//////////////////////////////
-gulp.task('img-deploy', function () {
-    gulp.src(['assets/img/*']).pipe(gulp.dest('dist/img'))
-});
-
-//////////////////////////////
-// Font Deploy
-//////////////////////////////
-gulp.task('font-deploy', function () {
-    gulp.src(['assets/fonts/*']).pipe(gulp.dest('dist/fonts'))
-});
 
 //////////////////////////////
 /// BUILD TASK FOR JENKINS
@@ -144,6 +153,6 @@ gulp.task('build', [
     'sass',
     'js',
     'sprite',
-    'font-deploy',
-    'img-deploy'
+    'images',
+    'fonts'
 ]);
