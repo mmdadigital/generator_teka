@@ -1,13 +1,13 @@
 {
   "name": "generator-teka",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Yeoman Generator to create a brand new teka theme.",
   "license": "MIT",
   "main": "generators/app/index.js",
   "author": {
     "name": "MMDA",
-    "email": "merker@mmda.com.br",
-    "url": "https://mmda.com.br"
+    "email": "tecnologia@mmda.com.br",
+    "url": "http://www.mmda.com.br"
   },
   "engines": {
     "node": ">=0.10.25"
@@ -44,8 +44,12 @@
   },
   "maintainers": [
     {
-      "name": "mmda",
-      "email": "merker@mmda.com.br"
+      "name": "Adriano Pulz",
+      "email": "adriano.pulz@mmda.com.br"
+    },
+    {
+      "name": "Guilherme Lopes",
+      "email": "guilherme@mmda.com.br"
     }
   ],
   "dist": {
