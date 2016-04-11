@@ -9,7 +9,7 @@ input,
 label,
 select {
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $font-size;
 }
 
 label {
@@ -34,7 +34,7 @@ select[multiple=multiple],
   box-sizing: border-box;
   display: block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $font-size;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
   transition: border-color;
