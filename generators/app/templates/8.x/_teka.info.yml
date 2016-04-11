@@ -1,0 +1,10 @@
+name: <%= projectName %>
+type: theme
+base theme: teka
+description: '<%= projectName %> theme, with HTML5, SASS, Responsive grid base theme.'
+package: <%= projectName %>
+core: 8.x
+version: '1.0'
+
+libraries:
+  - <%= projectSlug %>/global-styling

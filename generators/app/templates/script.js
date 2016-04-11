@@ -6,7 +6,7 @@
  */
 
 (function($) {
-  Drupal.behaviors.teka_main = {
+  Drupal.behaviors.<%= projectSlug %> = {
     attach: function (context, settings) {
       //
     }

@@ -8,10 +8,7 @@ var exec = require('sync-exec');
 var _s = require('underscore.string');
 var fs = require('fs');
 
-
-
 var baseThemeList = {name: "TEKA", value: "teka", generator: "drupal-theme:teka" };
-
 
 var TekaThemeGenerator = yeoman.generators.Base.extend({
   init: function () {
@@ -67,18 +64,25 @@ TekaThemeGenerator.prototype.askForBase = function () {
         }
         return true;
       }
+    },
+    {
+      type: 'list',
+      name: 'drupalVersion',
+      message: 'What\'s your drupal\'s version?' + chalk.red(' (Required)'),
+      choices: ['7.x', '8.x']
     }
-
   ];
 
   this.prompt(prompts, function (props) {
-    this.projectName = props.projectName.replace(/\s+/g, '_').toLowerCase();
+    this.projectName = props.projectName;
     this.projectHost = props.projectHost.replace(/\s+/g, '');
     this.projectSlug = _s.underscored(props.projectName);
+    this.drupalVersion = props.drupalVersion;
 
     this.config.set('projectName', this.projectName);
     this.config.set('projectHost', this.projectHost);
     this.config.set('projectSlug', this.projectSlug);
+    this.config.set('drupalVersion', this.drupalVersion);
     this.config.set('baseTheme', 'teka');
 
     cb();
@@ -92,7 +96,6 @@ TekaThemeGenerator.prototype.drupal = function () {
   this.destinationRoot(this.projectSlug);
 
   // Make all the directories we know that we will need.
-
   this.mkdir('dist');
   this.mkdir('dist/css');
   this.mkdir('dist/js');
@@ -107,12 +110,18 @@ TekaThemeGenerator.prototype.drupal = function () {
   this.mkdir('assets/js');
   this.mkdir('assets/img');
   this.mkdir('assets/img/sprite');
-
   this.mkdir('templates');
 
   // General theme files.
-  this.template('_teka.info', this.projectName+'.info');
-  this.template('_template.php', 'template.php');
+  if (this.drupalVersion == '7.x') {
+    this.template('7.x/_teka.info', this.projectSlug+'.info');
+    this.template('7.x/_template.php', 'template.php');
+  }
+  else {
+    this.template('8.x/_teka.info.yml', this.projectSlug + '.info.yml');
+    this.template('8.x/_teka.theme', this.projectSlug + '.theme');
+    this.template('8.x/_teka.libraries.yml', this.projectSlug + '.libraries.yml');
+  }
 
   // Populating directories.
   this.directory('scss/base', 'assets/scss/base');
@@ -141,7 +150,5 @@ TekaThemeGenerator.prototype.drupal = function () {
   this.copy('ignore.gitignore', '.gitignore');
   this.copy('README.txt', 'README.txt');
 };
-
-
 
 module.exports = TekaThemeGenerator;

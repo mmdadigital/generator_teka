@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Implements custom <%= projectName %> Hooks.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+/* -- Delete this line if you want to use this function
+function <%= projectSlug %>_preprocess_html(&$vars) {
+
+}
+// */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+/* -- Delete this line if you want to use this function
+function <%= projectSlug %>_page_attachments_alter(&$page) {
+
+}
+// */
+
+/**
+ * Implements hook_preprocess_node().
+ */
+/* -- Delete this line if you want to use this function
+function <%= projectSlug %>_preprocess_node(&$vars) {
+
+}
+// */

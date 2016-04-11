@@ -7,7 +7,7 @@
  * Implements hook_preprocess_html().
  */
 /* -- Delete this line if you want to use this function
-function <%= projectName %>_preprocess_html(&$vars) {
+function <%= projectSlug %>_preprocess_html(&$vars) {
 
 }
 // */
@@ -16,7 +16,7 @@ function <%= projectName %>_preprocess_html(&$vars) {
  * Implements hook_preprocess_page().
  */
 /* -- Delete this line if you want to use this function
-function <%= projectName %>_preprocess_page(&$vars, $hook) {
+function <%= projectSlug %>_preprocess_page(&$vars, $hook) {
 
 }
 // */
@@ -25,7 +25,7 @@ function <%= projectName %>_preprocess_page(&$vars, $hook) {
  * Implements hook_preprocess_node().
  */
 /* -- Delete this line if you want to use this function
-function <%= projectName %>_preprocess_node(&$vars) {
+function <%= projectSlug %>_preprocess_node(&$vars) {
 
 }
 // */
@@ -34,7 +34,7 @@ function <%= projectName %>_preprocess_node(&$vars) {
  * Implements hook_breadcrumb().
  */
 /* -- Delete this line if you want to use this function
-function <%= projectName %>_breadcrumb($variables) {
+function <%= projectSlug %>_breadcrumb($variables) {
 
 }
 //*/
