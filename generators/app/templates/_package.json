@@ -3,11 +3,6 @@
   "version": "0.0.1",
   "description": "<%= projectName %> Theme generated via Teka sub-theme generator",
   "main": "app/index.js",
-  "author": {
-    "name": "MMDA",
-    "email": "tecnologia@gmail.com",
-    "url": "https://mmda.com.br"
-  },
   "files": [
     "generators"
   ],
