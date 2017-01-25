@@ -70,6 +70,15 @@ TekaThemeGenerator.prototype.askForBase = function () {
       name: 'drupalVersion',
       message: 'What\'s your drupal\'s version?' + chalk.red(' (Required)'),
       choices: ['7.x', '8.x']
+    },
+    {
+      type: 'confirm',
+      name: 'patternLab',
+      message: 'Do you want to use Pattern Lab?',
+      default: false,
+      when: function(answers) {
+        return answers.drupalVersion == '8.x';
+      },
     }
   ];
 
@@ -78,11 +87,13 @@ TekaThemeGenerator.prototype.askForBase = function () {
     this.projectHost = props.projectHost.replace(/\s+/g, '');
     this.projectSlug = _s.underscored(props.projectName);
     this.drupalVersion = props.drupalVersion;
+    this.patternLab = props.patternLab;
 
     this.config.set('projectName', this.projectName);
     this.config.set('projectHost', this.projectHost);
     this.config.set('projectSlug', this.projectSlug);
     this.config.set('drupalVersion', this.drupalVersion);
+    this.config.set('patternLab', this.patternLab);
     this.config.set('baseTheme', 'teka');
 
     cb();
@@ -111,6 +122,9 @@ TekaThemeGenerator.prototype.drupal = function () {
   this.mkdir('assets/img');
   this.mkdir('assets/img/sprite');
   this.mkdir('templates');
+  if (this.patternLab == true) {
+    this.mkdir('pattern-lab-source');
+  }
 
   // General theme files.
   if (this.drupalVersion == '7.x') {
@@ -128,14 +142,17 @@ TekaThemeGenerator.prototype.drupal = function () {
   this.directory('scss/components', 'assets/scss/components');
   this.directory('scss/config', 'assets/scss/config');
   this.directory('scss/partials', 'assets/scss/partials');
-  this.directory('templates', 'templates');
 
   // Gulp settings file.
   this.template('_gulpfile.js', 'gulpfile.js');
   this.template('_package.json', 'package.json');
 
   // Images
-  this.copy('logo.png', 'logo.png');
+  if (this.drupalVersion == '7.x') {
+    this.copy('7.x/logo.png', 'logo.png');
+  } else {
+    this.copy('8.x/logo.svg', 'logo.svg');
+  }
   this.copy('_screenshot.jpg', 'screenshot.jpg');
   this.copy('sample.png', 'assets/img/sprite/sample.png');
 
@@ -149,6 +166,12 @@ TekaThemeGenerator.prototype.drupal = function () {
   // Some config files we want to have.
   this.copy('ignore.gitignore', '.gitignore');
   this.copy('README.txt', 'README.txt');
+
+  if (this.patternLab == true) {
+    // Pattern lab source directory.
+    this.directory('8.x/pattern-lab/pattern-lab-source', 'pattern-lab-source');
+    this.directory('8.x/pattern-lab/templates', 'templates');
+  }
 };
 
 module.exports = TekaThemeGenerator;

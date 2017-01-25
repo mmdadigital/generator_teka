@@ -1,0 +1,22 @@
+{
+  "display_submitted": false,
+  "label": "Node title",
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "atoms-field",
+          "with": {
+            "field_name": "body",
+            "label_hidden": true,
+            "items": [
+              {
+                "content": "<p>Basic Page body field. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

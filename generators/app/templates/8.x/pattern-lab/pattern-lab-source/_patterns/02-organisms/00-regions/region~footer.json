@@ -1,0 +1,6 @@
+{
+  "region": "footer",
+  "content": {
+    "join()": ["molecules-menu-footer"]
+  }
+}

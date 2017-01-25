@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "title": "My Account",
+      "url": "#"
+    },
+    {
+      "title": "Log out",
+      "url": "#"
+    }
+  ]
+}

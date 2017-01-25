@@ -1,0 +1,8 @@
+{
+  "label": "Field label",
+  "items": [
+    {
+      "content": "<p>Field content</p>"
+    }
+  ]
+}

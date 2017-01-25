@@ -1,0 +1,29 @@
+{
+  "page": {
+    "content": {
+      "join()": [
+        {
+          "include()": {
+            "pattern": "molecules-block-page-title"
+          }
+        },
+        {
+          "include()": {
+            "pattern": "molecules-block-main",
+            "with": {
+              "content": {
+                "include()": {
+                  "pattern": "organisms-node-article",
+                  "with": {
+                    "view_mode": "full",
+                    "page": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

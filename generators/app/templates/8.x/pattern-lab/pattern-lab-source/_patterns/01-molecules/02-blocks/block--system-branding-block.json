@@ -1,0 +1,14 @@
+{
+  "title_attributes": {
+    "Attribute()": {
+      "class": ["block__title"]
+    }
+  },
+  "configuration": {
+    "provider": "system-branding-block"
+  },
+  "plugin_id": "system",
+  "site_name": "Teka + Pattern Lab",
+  "site_slogan": "by MMDA",
+  "site_logo": "../../../../logo.svg"
+}

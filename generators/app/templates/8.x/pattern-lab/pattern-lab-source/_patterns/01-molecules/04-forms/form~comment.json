@@ -1,0 +1,56 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "id": "comment-form",
+      "class": ["comment-comment-form", "comment-form"]
+    }
+  },
+  "children": {
+    "join()": [
+      {
+        "include()": {
+            "pattern": "atoms-form-element-textfield",
+            "with": {
+                "label": {
+                    "include()": {
+                        "pattern": "atoms-form-element-label",
+                        "with": {
+                            "title": "Subject"
+                        }
+                    }
+                }
+            }
+        }
+      },
+      {
+        "include()": {
+            "pattern": "atoms-form-element-textarea",
+            "with": {
+                "label": {
+                    "include()": {
+                        "pattern": "atoms-form-element-label",
+                        "with": {
+                            "title": "Comment"
+                        }
+                    }
+                }
+            }
+        }
+      },
+      {
+        "include()": {
+            "pattern": "atoms-input",
+            "with": {
+              "attributes": {
+                "Attribute()": {
+                  "type": ["submit"],
+                  "value": ["Save"],
+                  "class": ["button", "button--primary", "form-submit"]
+                }
+              }
+            }
+        }
+      }
+    ]
+  }
+}

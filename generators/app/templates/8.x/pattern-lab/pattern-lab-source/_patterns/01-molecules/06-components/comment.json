@@ -1,0 +1,40 @@
+{
+  "submitted": "Submitted by admin on Wed, 01/11/2017 - 23:29",
+  "title": "Comment Title",
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "atoms-field",
+          "with": {
+            "field_name": "comment-body",
+            "label_hidden": true,
+            "items": [
+              {
+                "content": "<p>Comment body field. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "molecules-links",
+          "with": {
+            "links": [
+              {
+                "link": "<a href=\"\">Link 1</a>"
+              },
+              {
+                "link": "<a href=\"\">Link 2</a>"
+              },
+              {
+                "link": "<a href=\"\">Link 3</a>"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

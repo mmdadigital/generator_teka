@@ -1,0 +1,28 @@
+{
+  "type": "checkbox",
+  "name": "name",
+  "label_display": "after",
+  "label": {
+    "include()": {
+      "pattern": "atoms-form-element-label",
+      "with": {
+        "title": "Checkbox label",
+        "title_display": "after"
+      }
+    }
+  },
+  "children": {
+    "include()": {
+      "pattern": "atoms-input",
+      "with": {
+        "attributes": {
+          "Attribute()": {
+            "type": "checkbox",
+            "class": ["form-checkbox"],
+            "id": "checkbox-id"
+          }
+        }
+      }
+    }
+  }
+}

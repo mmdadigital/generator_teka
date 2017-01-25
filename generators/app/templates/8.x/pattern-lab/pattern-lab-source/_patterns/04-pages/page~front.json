@@ -1,0 +1,114 @@
+{
+  "page": {
+    "breadcrumb": "",
+    "content": {
+      "include()": {
+        "pattern": "organisms-views-view",
+        "with": {
+          "rows": {
+            "include()": {
+              "pattern": "organisms-views-view-unformatted",
+              "with": {
+                "rows": [
+                  {
+                    "content": {
+                      "include()": {
+                        "pattern": "organisms-node-article-teaser",
+                        "with": {
+                          "label": "My awesome article",
+                          "content": {
+                            "join()": [
+                              {
+                                "include()": {
+                                  "pattern": "atoms-field-body",
+                                  "with": {
+                                    "items": [
+                                      {
+                                        "content": "My awesome content."
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "include()": {
+                                  "pattern": "molecules-links"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "content": {
+                      "include()": {
+                        "pattern": "organisms-node-article-teaser",
+                        "with": {
+                          "label": "My cool article",
+                          "content": {
+                            "join()": [
+                              {
+                                "include()": {
+                                  "pattern": "atoms-field-body",
+                                  "with": {
+                                    "items": [
+                                      {
+                                        "content": "My cool content."
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "include()": {
+                                  "pattern": "molecules-links"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "content": {
+                      "include()": {
+                        "pattern": "organisms-node-article-teaser",
+                        "with": {
+                          "label": "My article",
+                          "content": {
+                            "join()": [
+                              {
+                                "include()": {
+                                  "pattern": "atoms-field-body",
+                                  "with": {
+                                    "items": [
+                                      {
+                                        "content": "My content."
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "include()": {
+                                  "pattern": "molecules-links"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

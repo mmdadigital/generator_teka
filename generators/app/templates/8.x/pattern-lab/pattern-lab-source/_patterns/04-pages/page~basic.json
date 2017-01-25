@@ -1,0 +1,56 @@
+{
+  "page": {
+    "content": {
+      "join()": [
+        {
+          "include()": {
+            "pattern": "molecules-block-page-title",
+            "with": {
+              "content": {
+                "include()": {
+                  "pattern": "atoms-page-title",
+                  "with": {
+                    "title": "My awesome page"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "include()": {
+            "pattern": "molecules-block-main",
+            "with": {
+              "content": {
+                "include()": {
+                  "pattern": "organisms-node-page",
+                  "with": {
+                    "view_mode": "full",
+                    "page": true,
+                    "content": {
+                      "join()": [
+                        "My awesome page content.<br>",
+                        {
+                          "include()": {
+                            "pattern": "atoms-image-medium",
+                            "with": {
+                              "attributes": {
+                                "Attribute()": {
+                                  "src": "http://lorempixel.com/200/200/cats"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

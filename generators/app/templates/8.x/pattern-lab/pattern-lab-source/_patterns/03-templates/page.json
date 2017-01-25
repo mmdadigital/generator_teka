@@ -1,0 +1,26 @@
+{
+  "page": {
+    "header": {
+      "join()": ["organisms-region-header"]
+    },
+    "primary_menu": {
+      "join()": ["molecules-menu-primary"]
+    },
+    "secondary_menu": {
+      "join()": ["molecules-menu-account"]
+    },
+    "highlighted": "",
+    "help": "",
+    "content": "",
+    "sidebar_first": {
+      "join()": ["molecules-block--search-form-block"]
+    },
+    "sidebar_second": "",
+    "footer": {
+      "join()": ["organisms-region-footer"]
+    },
+    "breadcrumb": {
+      "join()": ["molecules-breadcrumb"]
+    }
+  }
+}
