@@ -1,0 +1,28 @@
+{
+  "type": "radio",
+  "name": "name",
+  "label_display": "after",
+  "label": {
+    "include()": {
+      "pattern": "atoms-form-element-label",
+      "with": {
+        "title": "Radio label",
+        "title_display": "after"
+      }
+    }
+  },
+  "children": {
+    "include()": {
+      "pattern": "atoms-input",
+      "with": {
+        "attributes": {
+          "Attribute()": {
+            "type": "radio",
+            "class": ["form-radio"],
+            "id": "radio-id"
+          }
+        }
+      }
+    }
+  }
+}

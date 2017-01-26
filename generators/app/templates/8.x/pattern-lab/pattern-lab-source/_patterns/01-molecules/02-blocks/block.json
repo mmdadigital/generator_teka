@@ -1,0 +1,9 @@
+{
+  "title_attributes": {
+    "Attribute()": {
+      "class": ["block__title"]
+    }
+  },
+  "label": "Block title",
+  "content": "Block content."
+}

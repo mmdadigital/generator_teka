@@ -8,7 +8,20 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync').create(),
     plumber     = require('gulp-plumber'),
     spritesmith = require('gulp.spritesmith'),
-    neat        = require('node-neat').includePaths;
+    neat        = require('node-neat').includePaths,
+    fs          = require('fs'),
+    run         = require('gulp-run'),
+    runSequence = require('run-sequence');
+
+// Helper functions.
+function isDirectory(dir) {
+  try {
+    return fs.statSync(dir).isDirectory();
+  }
+  catch (err) {
+    return false;
+  }
+}
 
 //////////////////////////////
 // PATHS
@@ -16,7 +29,8 @@ var gulp        = require('gulp'),
 var path = {
   sassWatch: [
     'assets/scss/*.scss',
-    'assets/scss/**/*.scss'
+    'assets/scss/**/*.scss',
+    'pattern-lab-source/**/*.scss'
   ],
   sass_src_S: 'assets/scss/style.scss',
   sass_src_P: 'assets/scss/print.scss',
@@ -129,21 +143,21 @@ gulp.task('fonts', function () {
 //////////////////////////////
 gulp.task('watch', ['browser-sync'], function () {
     gulp.watch(path.js_src, ['js']).on('error',console.log.bind(console));
-    gulp.watch(path.sassWatch, ['sass']).on('error',console.log.bind(console));
+    gulp.watch(path.sassWatch, ['sass-change']).on('error',console.log.bind(console));
     gulp.watch('assets/img/sprite/*.*', ['sprite']).on('error',console.log.bind(console));
     gulp.watch('dist/js/*.*').on('change', browserSync.reload);
+    gulp.watch(['pattern-lab-source/_patterns/**/*.twig', 'pattern-lab-source/_patterns/**/*.json'], ['patterns-change']);
 });
 
 //////////////////////////////
 //Default Tasks
 //////////////////////////////
 gulp.task('default', [
-    'sass',
     'js',
     'watch',
     'sprite',
     'images',
-    'fonts'
+    'fonts',
 ]);
 
 //////////////////////////////
@@ -156,3 +170,26 @@ gulp.task('build', [
     'images',
     'fonts'
 ]);
+
+/**
+ * Task sequence to run when Sass files have changed.
+ */
+gulp.task('sass-change', function () {
+  runSequence('sass', 'patterns-change');
+});
+
+/**
+ * Task sequence to run when StarterKit pattern files have changed.
+ */
+gulp.task('patterns-change', function () {
+  runSequence('pl:generate', 'bs-reload');
+});
+
+/**
+ * Generates Pattern Lab front-end.
+ */
+gulp.task('pl:generate', function () {
+  if (isDirectory('./pattern-lab')) {
+    return run('php ./pattern-lab/core/console --generate').exec();
+  }
+});

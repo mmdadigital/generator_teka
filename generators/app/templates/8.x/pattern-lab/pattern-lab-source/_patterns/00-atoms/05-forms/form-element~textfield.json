@@ -1,0 +1,27 @@
+{
+  "type": "texfield",
+  "name": "name",
+  "title_display": "before",
+  "label_display": "before",
+  "label": {
+    "include()": {
+      "pattern": "atoms-form-element-label",
+      "with": {
+        "title": "Textfield label"
+      }
+    }
+  },
+  "children": {
+    "include()": {
+      "pattern": "atoms-input",
+      "with": {
+        "attributes": {
+          "Attribute()": {
+            "type": ["text"],
+            "class": ["form-text"]
+          }
+        }
+      }
+    }
+  }
+}

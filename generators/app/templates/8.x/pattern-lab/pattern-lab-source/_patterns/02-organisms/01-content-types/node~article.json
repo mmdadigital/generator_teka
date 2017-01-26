@@ -1,0 +1,16 @@
+{
+  "display_submitted": true,
+  "author_name": "admin",
+  "date": "01/01/2017",
+  "label": "Node title",
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "atoms-field-body"
+        }
+      },
+      "organisms-field--comment"
+    ]
+  }
+}

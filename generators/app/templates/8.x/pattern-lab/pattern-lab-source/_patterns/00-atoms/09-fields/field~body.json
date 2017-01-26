@@ -1,0 +1,19 @@
+{
+  "field_name": "body",
+  "label_hidden": true,
+  "items": [
+    {
+      "content": {
+        "join()": [
+          "atoms-paragraph",
+          "atoms-paragraph",
+          "atoms-blockquote",
+          "atoms-paragraph",
+          "molecules-figure-with-caption",
+          "atoms-paragraph",
+          "atoms-paragraph"
+        ]
+      }
+    }
+  ]
+}

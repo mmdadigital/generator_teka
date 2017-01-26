@@ -1,0 +1,7 @@
+{
+  "configuration": {
+    "provider": "system"
+  },
+  "plugin_id": "system-main-block",
+  "label": ""
+}

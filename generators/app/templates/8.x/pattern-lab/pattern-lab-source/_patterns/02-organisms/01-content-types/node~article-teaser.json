@@ -1,0 +1,28 @@
+{
+  "display_submitted": true,
+  "author_name": "admin",
+  "date": "01/01/2017",
+  "label": "Node title",
+  "view_mode": "teaser",
+  "content": {
+    "join()": [
+      {
+        "include()": {
+          "pattern": "atoms-field-body",
+          "with": {
+            "items": [
+              {
+                "content": "atoms-paragraph"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "include()": {
+          "pattern": "molecules-links"
+        }
+      }
+    ]
+  }
+}

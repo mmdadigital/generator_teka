@@ -25,7 +25,10 @@
     "jshint-stylish": "^2.0.0",
     "node-bourbon": "^4.2.2",
     "node-neat": "^1.7.1-beta1",
-    "watch": "^0.16.0"
+    "watch": "^0.16.0",
+    "fs": "0.0.1-security",
+    "gulp-run": "^1.7.1",
+    "run-sequence": "^1.2.2"
   },
   "scripts": {
     "test": "gulp",

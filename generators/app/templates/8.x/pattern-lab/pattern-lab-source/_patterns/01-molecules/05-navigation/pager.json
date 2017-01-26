@@ -1,0 +1,33 @@
+{
+  "items": {
+    "first": {
+      "href": "#"
+    },
+    "previous": {
+      "href": "#"
+    },
+    "pages": [
+      {
+        "href": "#"
+      },
+      {
+        "href": "#"
+      },
+      {
+        "href": "#"
+      },
+      {
+        "href": "#"
+      },
+      {
+        "href": "#"
+      }
+    ],
+    "next": {
+      "href": "#"
+    },
+    "last": {
+      "href": "#"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "configuration": {
+    "provider": "core"
+  },
+  "plugin_id": "page-title-block",
+  "label": "",
+  "content": {
+    "include()": {
+      "pattern": "atoms-page-title"
+    }
+  }
+}

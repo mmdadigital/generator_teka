@@ -1,0 +1,9 @@
+{
+  "label": "Comments",
+  "comments": {
+      "join()": ["molecules-comment", "molecules-comment", "molecules-comment"]
+  },
+  "comment_form": {
+    "join()": ["molecules-form-comment"]
+  }
+}

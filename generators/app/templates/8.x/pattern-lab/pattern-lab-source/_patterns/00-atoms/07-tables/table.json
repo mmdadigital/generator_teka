@@ -1,0 +1,76 @@
+{
+  "header": [
+      {
+        "tag": "th",
+        "content": "Table Heading 1"
+      },
+      {
+        "tag": "th",
+        "content": "Table Heading 2"
+      },
+      {
+        "tag": "th",
+        "content": "Table Heading 3"
+      },
+      {
+        "tag": "th",
+        "content": "Table Heading 4"
+      },
+      {
+        "tag": "th",
+        "content": "Table Heading 5"
+      }
+  ],
+  "rows": [
+    {
+      "cells": [
+        {
+          "tag": "td",
+          "content": "Table Cell 1"
+        },
+        {
+          "tag": "td",
+          "content": "Table Cell 2"
+        },
+        {
+          "tag": "td",
+          "content": "Table Cell 3"
+        },
+        {
+          "tag": "td",
+          "content": "Table Cell 4"
+        },
+        {
+          "tag": "td",
+          "content": "Table Cell 5"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "cells": [
+        {
+          "tag": "th",
+          "content": "Table Footer 1"
+        },
+        {
+          "tag": "th",
+          "content": "Table Footer 2"
+        },
+        {
+          "tag": "th",
+          "content": "Table Footer 3"
+        },
+        {
+          "tag": "th",
+          "content": "Table Footer 4"
+        },
+        {
+          "tag": "th",
+          "content": "Table Footer 5"
+        }
+      ]
+    }
+  ]
+}

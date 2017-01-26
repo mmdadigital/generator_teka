@@ -1,0 +1,44 @@
+{
+  "attributes": {
+    "Attribute()": {
+      "id": "search-block-form"
+    }
+  },
+  "children": {
+    "join()": [
+      {
+        "include()": {
+            "pattern": "atoms-form-element-textfield",
+            "with": {
+                "label": {
+                    "include()": {
+                        "pattern": "atoms-form-element-label",
+                        "with": {
+                          "attributes": {
+                            "Attribute()": {}
+                          },
+                          "title_display": "invisible",
+                          "title": "Search"
+                        }
+                    }
+                }
+            }
+        }
+      },
+      {
+        "include()": {
+            "pattern": "atoms-input",
+            "with": {
+              "attributes": {
+                "Attribute()": {
+                  "type": ["submit"],
+                  "value": ["Search"],
+                  "class": ["button", "form-submit"]
+                }
+              }
+            }
+        }
+      }
+    ]
+  }
+}

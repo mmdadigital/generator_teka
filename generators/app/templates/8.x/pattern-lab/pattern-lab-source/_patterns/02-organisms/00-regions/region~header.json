@@ -1,0 +1,6 @@
+{
+  "region": "header",
+  "content": {
+    "join()": ["molecules-block--system-branding-block"]
+  }
+}

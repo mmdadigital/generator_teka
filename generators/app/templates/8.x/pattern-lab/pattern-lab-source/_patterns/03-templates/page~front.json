@@ -1,0 +1,30 @@
+{
+  "page": {
+    "breadcrumb": "",
+    "content": {
+      "include()": {
+        "pattern": "organisms-views-view",
+        "with": {
+          "rows": {
+            "include()": {
+              "pattern": "organisms-views-view-unformatted",
+              "with": {
+                "rows": [
+                  {
+                    "content": "organisms-node-article-teaser"
+                  },
+                  {
+                    "content": "organisms-node-article-teaser"
+                  },
+                  {
+                    "content": "organisms-node-article-teaser"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
