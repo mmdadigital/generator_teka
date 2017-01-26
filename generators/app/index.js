@@ -151,6 +151,11 @@ TekaThemeGenerator.prototype.drupal = function () {
     this.template('_package.json', 'package.json');
   }
 
+  // .htaccess for Pattern Lab.
+  if (this.patternLab == true) {
+    this.copy('8.x/pattern-lab/_pattern-lab.htaccess', '_pattern-lab.htaccess');
+  }
+
   // Images
   if (this.drupalVersion == '7.x') {
     this.copy('7.x/logo.png', 'logo.png');

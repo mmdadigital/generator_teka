@@ -32,7 +32,7 @@
   },
   "scripts": {
     "test": "gulp",
-    "postinstall": "npm install browser-sync --save && find node_modules/ -name '*.info' -type f -delete && composer create-project pattern-lab/edition-drupal-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../pattern-lab-source pattern-lab/source"
+    "postinstall": "npm install browser-sync --save && find node_modules/ -name '*.info' -type f -delete && composer create-project pattern-lab/edition-drupal-standard pattern-lab && rm -rf pattern-lab/source && ln -s ../pattern-lab-source pattern-lab/source && ln -s ../_pattern-lab.htaccess pattern-lab/.htaccess"
   },
   "repository": {
     "type": "git",
