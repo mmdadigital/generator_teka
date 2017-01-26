@@ -9,6 +9,10 @@ version: '1.0'
 libraries:
   - <%= projectSlug %>/global-styling
 
+# Pattern Lab
+# TODO: create a separate info for Pattern Lab version and add Components module
+# as a theme dependency when this issue is resolved:
+# https://www.drupal.org/node/474684
 component-libraries:
   atoms:
     paths:

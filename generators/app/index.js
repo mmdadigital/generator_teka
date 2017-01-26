@@ -145,7 +145,11 @@ TekaThemeGenerator.prototype.drupal = function () {
 
   // Gulp settings file.
   this.template('_gulpfile.js', 'gulpfile.js');
-  this.template('_package.json', 'package.json');
+  if (this.patternLab == true) {
+    this.template('8.x/pattern-lab/_package.json', 'package.json');
+  } else {
+    this.template('_package.json', 'package.json');
+  }
 
   // Images
   if (this.drupalVersion == '7.x') {
