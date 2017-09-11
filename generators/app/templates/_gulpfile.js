@@ -36,7 +36,8 @@ var path = {
 gulp.task('browser-sync', ['sass'], function() {
     browserSync.init({
         proxy: "<%= projectHost %>",
-        notify: false
+        notify: false,
+        injectChanges: false
     });
 });
 
